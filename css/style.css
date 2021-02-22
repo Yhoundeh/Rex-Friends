@@ -7,8 +7,6 @@
   src: url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather');
 }
 
-@import "/css/small-style.css";
-
 :root {
     --font-body: 'Merriweather', Trebuchet, sans-serif;
     --font-headline: 'Merriweather Sans', Trebuchet, sans-serif;
@@ -24,7 +22,9 @@
     --font-base: 18px;
     --small-font: 0.8em;
     --large-font: 1.2em;
-  }
+}
+
+@import "/css/small-style.css";
 
 header, footer{
   padding: 0 10px;
