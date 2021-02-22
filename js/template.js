@@ -8,7 +8,7 @@ export async function loadHeaderFooter() {
     }
   };
 
-  xhttp.open("GET", "header.txt", true);
+  xhttp.open("GET", "../templates/header.txt", true);
   xhttp.send();
 
   var xhttp = new XMLHttpRequest();
@@ -18,6 +18,6 @@ export async function loadHeaderFooter() {
       this.responseText;
     }
   };
-  xhttp.open("GET", "footer.txt", true);
+  xhttp.open("GET", "../templates/footer.txt", true);
   xhttp.send();
 }
