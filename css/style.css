@@ -69,11 +69,12 @@ body {
   color: var(--dark-grey);
   
 }
-img {
+#centered img {
   max-width: 15%; 
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 3.6em;
   width: 50%;
 }
 
