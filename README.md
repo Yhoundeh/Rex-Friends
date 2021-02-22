@@ -1,14 +1,14 @@
 # Rex-Friends
 ## Overview
 
-This repository is a simple group chat website. 
+This repository contains the code for a simple group chat website called Rex Chat. 
 
 
-[Software Demo Video]()
+[Software Demo Video](https://www.youtube.com/watch?v=-aLYvZ5sX28)
 
 ## Development Environment
 
-This website was coded in VScode with in HTML, CSS, and JavaScript.
+This website frontend was coded in VScode using HTML, CSS, and JavaScript.
 
 
 ## Useful Websites
