@@ -1,5 +1,12 @@
-@import './small-style.css';
 /*Don't touch!*/
+@import './med-style.css';
+@import './large-style.css';
+/*  320px — 480px: Mobile devices
+    481px — 768px: iPads, Tablets
+    769px — 1024px: Small screens, laptops
+    1025px — 1200px: Desktops, large screens
+    1201px and more —  Extra large screens, TV
+    */
 @font-face {
   font-family: Merriweather;
   src: url('https://fonts.googleapis.com/css2?family=Merriweather');
@@ -70,7 +77,7 @@ body {
   
 }
 #centered img {
-  max-width: 15%; 
+  max-width: 14.75%; 
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -83,7 +90,15 @@ footer {
   border-top: 5px solid var(--light_green);
   text-align: center;
 }
+footer p {
+  margin-bottom: 0;
+}
 footer a {
   color:var(--light_green);
   text-decoration: none;
+}
+
+/*  320px — 480px: Mobile devices*/
+@media only screen and (max-width: 480px) {
+
 }

@@ -6,4 +6,3 @@ node_modules
 .gitignore
 package-lock.json
 package.json
-snowpack.config.js
