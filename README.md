@@ -13,5 +13,5 @@ This website was coded in VScode with in HTML, CSS, and JavaScript.
 
 ## Useful Websites
 
-* [w3schools.com](https://www.w3schools.com/python/)
-* [Stackoverflow](https://stackoverflow.com/questions/tagged/python)
+* [w3schools.com](https://www.w3schools.com/)
+* [Stackoverflow](https://stackoverflow.com/questions/)
