@@ -1,0 +1,24 @@
+{
+  "name": "rex-friends",
+  "version": "1.0.0",
+  "description": "A simple chat website.",
+  "main": "main.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValiantWolf/Rex-Friends.git"
+  },
+  "author": "Aaron Dunn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValiantWolf/Rex-Friends/issues"
+  },
+  "homepage": "https://github.com/ValiantWolf/Rex-Friends#readme",
+  "devDependencies": {
+    "snowpack": "^3.0.11"
+  },
+  "dependencies": {}
+}

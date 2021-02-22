@@ -1,0 +1,4 @@
+<div class="logo">
+    <img src="/images/tyrannosaurus-rex.svg" alt="Rex Chat logo provided by flaticon" />
+    <a href="/index.html">Rex<span class="highlight">Chat</span></a>
+</div>
