@@ -8,7 +8,7 @@ This repository is a simple group chat website.
 
 ## Development Environment
 
-This program was coded in VScode with in HTML, CSS, and JavaScript.
+This website was coded in VScode with in HTML, CSS, and JavaScript.
 
 
 ## Useful Websites
