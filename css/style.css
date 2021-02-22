@@ -1,13 +1,23 @@
+@font-face {
+  font-family: Merriweather;
+  src: url('https://fonts.googleapis.com/css2?family=Merriweather');
+}
+@font-face {
+  font-family: Merriweather Sans;
+  src: url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather');
+}
+
 :root {
-    --font-body: Arial, Helvetica, sans-serif;
-    --font-headline: Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    /* colors */
-    --primary-color: #f0a868;
-    --secondary-color: #525b0f;
-    --tertiary-color: #a4b8c4;
-    --light-grey: #d0d0d0;
-    --dark-grey: #303030;
-  
+    --font-body: 'Merriweather', Trebuchet, sans-serif;
+    --font-headline: 'Merriweather Sans', Trebuchet, sans-serif;
+    
+    /* colors */              /*color-purpose*/
+    --pale_green: #D8F3DC;  /*background*/
+    --dark-grey: #374B4A;   /*basic grey*/
+    --light_green: #429E73; /*light highlight*/
+    --dark_green: #0D3024;  /*primary color*/
+    --rich_black: #000501;  /*dark highlight*/
+
     /* sizes */
     --font-base: 18px;
     --small-font: 0.8em;
