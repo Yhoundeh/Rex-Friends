@@ -1,76 +1,89 @@
+@import './small-style.css';
+/*Don't touch!*/
+@font-face {
+  font-family: Merriweather;
+  src: url('https://fonts.googleapis.com/css2?family=Merriweather');
+}
+@font-face {
+  font-family: Merriweather Sans;
+  src: url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather');
+}
+
 :root {
-    --font-body: Arial, Helvetica, sans-serif;
-    --font-headline: Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    /* colors */
-    --primary-color: #f0a868;
-    --secondary-color: #525b0f;
-    --tertiary-color: #a4b8c4;
-    --light-grey: #d0d0d0;
-    --dark-grey: #303030;
-  
+    --font-body: 'Merriweather', Trebuchet, sans-serif;
+    --font-headline: 'Merriweather Sans', Trebuchet, sans-serif;
+    
+    /* colors */              /*color-purpose*/
+    --pale_green: #D8F3DC;  /*background*/
+    --dark-grey: #374B4A;   /*basic grey*/
+    --light_green: #429E73; /*light highlight*/
+    --dark_green: #0D3024;  /*primary color*/
+    --rich_black: #000501;  /*dark highlight*/
+
     /* sizes */
     --font-base: 18px;
     --small-font: 0.8em;
     --large-font: 1.2em;
-  }
+}
 
-  body {
-    margin: 0;
-    font-family: var(--font-body);
-    font-size: var(--font-base);
-    color: var(--dark-grey);
-  }
-  img {
-    max-width: 100%;
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-  }
-  .logo {
-    line-height: 60px;
-    width: 245px;
-    overflow: hidden;
-    display: flex;
-    font-size: 30px;
-    text-align: right;
-    font-family: var(--font-headline);
-  }
-  .logo img {
-    width: 60px;
-    height: 60px;
-  }
-  .logo a {
-    text-decoration: none;
-    color: var(--font-body);
-  }
-  .hero {
-    position: relative;
-  }
-  .hero .logo {
-    position: absolute;
-    left: calc(50% - 60px);
-    bottom: -10px;
-    background-color: white;
-  }
-  .logo--square {
-    font-size: var(--small-font);
-    width: 110px;
-    height: 80px;
+
+
+header, footer{
+  padding: 0 10px;
+  color: whitesmoke;
+  background: var(--dark_green);
+}
+
+/*Top*/
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid var(--light_green);
+}
+header .highlight {
+  color: var(--light_green);
+}
+.logo {
+  line-height: 60px;
+  width: 245px;
+  overflow: hidden;
+  display: flex;
+  font-size: 30px;
+  text-align: right;
+  font-family: var(--font-headline);
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+.logo a {
+  text-decoration: none;
+  color: var(--font-body);
+}
+
+/*content*/
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--font-base);
+  color: var(--dark-grey);
   
-    flex-direction: column;
-    align-items: flex-end;
-    box-shadow: 1px 1px 4px var(--light-grey);
-    justify-content: center;
-    align-items: center;
-    line-height: 1;
-  }
-  .logo--square img {
-    width: 90px;
-    height: 90px;
-    margin-top: -1.3em;
-  }
-  .logo--square > div {
-    margin-top: -1.7em;
-  }
+}
+#centered img {
+  max-width: 15%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.6em;
+  width: 50%;
+}
+
+/*Bottom*/
+footer {
+  border-top: 5px solid var(--light_green);
+  text-align: center;
+}
+footer a {
+  color:var(--light_green);
+  text-decoration: none;
+}
