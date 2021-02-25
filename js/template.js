@@ -29,13 +29,13 @@ export async function loadPosts() {
     const post = await loadTemplate('../templates/post.html');
     const postElement = document.getElementById("posts");
     renderWithTemplate(post, postElement);
+    getModal(i);
   }
 /*var img = document.getElementById('myImg');
   document.getElementById('myModal').style.display = "none";
   img.style.cssFloat = "left";
   img.style.marginRight = "5px";
   img.style.marginLeft = "";*/
-  getModal();
 }
 
 function convertToText(res) {
@@ -46,16 +46,17 @@ function convertToText(res) {
   }
 }
 
-function getModal() {
+function getModal(i) {
   // Get the modal
   var modal = document.getElementById('myModal');
 
   // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var img = document.getElementsByClassName('myImg');
+  var img = document.getElementsByClassName("myImg")[i];
   var modalImg = document.getElementById("img01");
   var captionText = document.getElementById("caption");
   img.onclick = function(){
-    modal.style.display = "block";
+  modal.style.display = "block";
+    document.getElementById("posts").id = "center"; 
   /*img.style.cssFloat = "none";
     img.style.marginRight = "50%";
     img.style.marginLeft = "50%";*/
@@ -68,6 +69,7 @@ function getModal() {
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() { 
+    document.getElementById("center").id = "posts"
     modal.style.display = "none";
   /*img.style.cssFloat = "left";
     img.style.marginRight = "5px";
