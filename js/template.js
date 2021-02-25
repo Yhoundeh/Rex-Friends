@@ -1,26 +1,3 @@
-
-/*export async function loadHeaderFooter() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("main-header").innerHTML =
-      this.responseText;
-    }
-  };
-
-  xhttp.open("GET", "../templates/header.txt", true);
-  xhttp.send();
-
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("main-footer").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "../templates/footer.txt", true);
-  xhttp.send();
-}*/
 export function renderWithTemplate(template, parent, data, callback) {
   let clone = template.content.cloneNode(true);
   if(callback) {
@@ -53,7 +30,7 @@ export async function loadPosts() {
     const postElement = document.getElementById("posts");
     renderWithTemplate(post, postElement);
   }
-  /*var img = document.getElementById('myImg');
+/*var img = document.getElementById('myImg');
   document.getElementById('myModal').style.display = "none";
   img.style.cssFloat = "left";
   img.style.marginRight = "5px";
@@ -79,7 +56,7 @@ function getModal() {
   var captionText = document.getElementById("caption");
   img.onclick = function(){
     modal.style.display = "block";
-    /*img.style.cssFloat = "none";
+  /*img.style.cssFloat = "none";
     img.style.marginRight = "50%";
     img.style.marginLeft = "50%";*/
     modalImg.src = this.src;
@@ -92,7 +69,7 @@ function getModal() {
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() { 
     modal.style.display = "none";
-    /*img.style.cssFloat = "left";
+  /*img.style.cssFloat = "left";
     img.style.marginRight = "5px";
     img.style.marginLeft = "";*/
   }
