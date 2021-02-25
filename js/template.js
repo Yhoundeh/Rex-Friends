@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-
-/*export async function loadHeaderFooter() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("main-header").innerHTML =
-      this.responseText;
-    }
-    parent.appendChild(clone);
-  }
-  
-  export async function loadTemplate(path) {
-    const html = await fetch(path).then(convertToText);
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template;
-  }
-
-  export async function loadHeaderFooter() {
-    const header = await loadTemplate('../templates/header.html');
-    const footer = await loadTemplate('../templates/footer.html');
-    const headerElement = document.getElementById('main-header');
-    const footerElement = document.getElementById('main-footer');
-    renderWithTemplate(header, headerElement);
-    renderWithTemplate(footer, footerElement);
-  }
-
-  function convertToText(res) {
-    if (res.ok) {
-      return res.text();
-    } else {
-      throw new Error("Bad Response");
-    }
-  };
-  xhttp.open("GET", "../templates/footer.txt", true);
-  xhttp.send();
-}*/
-=======
->>>>>>> b52779e1d975b5dc11a770e9e47b749de6f3fa71
 export function renderWithTemplate(template, parent, data, callback) {
   let clone = template.content.cloneNode(true);
   if(callback) {
@@ -91,7 +51,7 @@ function getModal() {
   var modal = document.getElementById('myModal');
 
   // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var img = document.getElementById('myImg');
+  var img = document.getElementsByClassName('myImg');
   var modalImg = document.getElementById("img01");
   var captionText = document.getElementById("caption");
   img.onclick = function(){
