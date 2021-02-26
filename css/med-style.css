@@ -68,13 +68,14 @@
     height: 5rem;
     background: var(--secondary-color);
     display: grid;
-    border-top: 5px solid var(--primary-color);
+    -webkit-box-shadow: inset 0 10px 0 0 var(--primary-color);
+    box-shadow: inset 0 10px 0 0 var(--primary-color);
     color: var(--primary-white);
     text-align: center;
   }
 
   .main-footer h3 {
-    padding-top: 0.5rem;
+    padding-top: 1rem;
   }
 
   .main-footer p {
