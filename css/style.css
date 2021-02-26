@@ -59,6 +59,7 @@ a {
   color: var(--primary-white);
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .main-header__login {
