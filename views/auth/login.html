@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lan="en-us">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Rex Chat | Home</title>
+        <link rel="shortcut icon" type="image/svg" href="images/tyrannosaurus-rex.svg"/>
+        <link rel="stylesheet" href="/css/style.css"/>
+        <script src="/js/main.js" type="module" ></script>
+    </head>
+    <body>
+        <div class="content">
+            <header class="main-header"><span id="Jscript">This page requires Javascript!</span></header>
+            <main class="main">
+                <div class="login">
+                    <form class="login-form" action="/login" method="POST">
+                        <div class="form-control">
+                            <label for="email">E-Mail</label>
+                            <input
+                                type="email" 
+                                name="email" 
+                                id="email"
+                            >
+                        </div>
+                        <div class="form-control">
+                            <label for="password">Password</label>
+                            <input
+                                type="password" 
+                                name="password" 
+                                id="password"
+                            >
+                        </div>
+                        <!-- <input type="hidden" name="_csrf" value="<%= csrfToken %>"> -->
+                        <button class="btn" type="submit">Login</button>
+                    </form>
+                    <div class="newPassword">
+                        <p><small>Forgot your Password?</small></p>
+                        <a class='btn' href="/reset">Reset Password</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="main-footer"></footer>
+    </body>
+</html>
