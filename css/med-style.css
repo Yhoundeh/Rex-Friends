@@ -1,6 +1,6 @@
 /*----------- MEDIA QUERIES --------------*/
-@media only screen and (min-width: 42rem) {
-
+@media only screen and (min-width: 35rem) {
+  /* Food for thought our layout breaks at 47rem.
   /*----------- HEADER --------------*/
   .main-header__page {
     display: none;
@@ -117,5 +117,8 @@
   /*----- HOME specific css -----*/
   .modal-content {
     width: 100%;
+  }
+  #center img {
+    max-width: 35%;
   }
 }

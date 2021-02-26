@@ -36,6 +36,10 @@ h6 {
   font-weight: 700;
 }
 
+p {
+  padding: 0.5rem;
+}
+
 ul {
   list-style: none;
 }
@@ -244,8 +248,7 @@ body {
   max-width: 14.75%;
   border-radius: 5px;
   float: left;
-  margin-right: 5px;
-  margin-top: 1.5em;
+  padding: 0.5rem;
 }
 
 #center img {
