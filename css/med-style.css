@@ -1,5 +1,120 @@
-/*  481px — 768px: iPads, Tablets
-    769px — 1024px: Small screens, laptops*/
-@media only screen and (min-width: 481px) {
-   
+/*----------- MEDIA QUERIES --------------*/
+@media only screen and (min-width: 35rem) {
+
+  /*----------- HEADER --------------*/
+  .main-header__page {
+    display: none;
   }
+
+  .main-header__login {
+    width: 8rem;
+  }
+
+  /*----------- NAVIGATION --------------*/
+  .main-header__nav {
+    margin-top: 2.5rem;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .main-header__list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .main-header__list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    margin: 0 1rem;
+    padding: 0 1.5rem 0.5rem 1.5rem;
+  }
+
+  .main-header__list-item a {
+    white-space: nowrap;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    color: var(--primary-white);
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border-radius: 5% 5% 0 0;
+  }
+
+  .main-header__list-item a:hover {
+    transition: var(--transition-timing);
+    background: var(--primary-color);
+  }
+
+  /*----------- BODY --------------*/
+  body {
+    margin: 0;
+  }
+
+  .content {
+    min-height: calc(100vh - 5rem);
+  }
+
+  /*----------- FOOTER --------------*/
+  .main-footer__info {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    background: var(--secondary-color);
+    display: grid;
+    border-top: 5px solid var(--primary-color);
+    color: var(--primary-white);
+    text-align: center;
+  }
+
+  .main-footer h3 {
+    padding-top: 0.5rem;
+  }
+
+  .main-footer p {
+    padding-bottom: 0.5rem;
+  }
+
+  .main-footer a {
+    color: var(--primary-color);
+  }
+
+  /*----------- BTNBAR --------------*/
+  .main-buttonbar {
+    display: none;
+  }
+
+  /*----------- LOGO --------------*/
+
+  .main-header__logo {
+    width: 20rem;
+  }
+
+  .main-header__logo-text {
+    display: flex;
+  }
+
+  .main-header__logo-text a {
+    color: var(--primary-white);
+    font-size: 2.5rem;
+  }
+
+  .main-header__logo-text .highlight {
+    color: var(--primary-color);
+  }
+
+  #t-rex {
+    width: 8rem;
+  }
+
+  /*----- HOME specific css -----*/
+  .modal-content {
+    width: 100%;
+  }
+}
