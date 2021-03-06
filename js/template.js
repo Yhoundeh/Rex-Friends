@@ -1,3 +1,20 @@
+export function currPage() {
+  //console.log(document.readyState);
+  if (window.location.pathname == "/index.html") {
+    document.getElementById("home").id = "highlight"; 
+  }
+  else if (window.location.pathname == "/pages/groups.html") {
+    document.getElementById("groups").id = "highlight";
+  }
+  else if (window.location.pathname == "/pages/search.html") {
+    document.getElementById("search").id = "highlight";
+  }
+  else if (window.location.pathname == "/pages/liked.html") {
+    document.getElementById("liked").id = "highlight";
+  }
+  //console.log(window.location.pathname);
+}
+
 export function renderWithTemplate(template, parent, data, callback) {
   let clone = template.content.cloneNode(true);
   if(callback) {
@@ -20,6 +37,7 @@ export async function loadHeaderFooter() {
   const footerElement = document.querySelector('footer');
   renderWithTemplate(header, headerElement);
   renderWithTemplate(footer, footerElement);
+  currPage();
 }
 
 export async function loadPosts() {
@@ -69,7 +87,7 @@ function getModal(i) {
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() { 
-    document.getElementById("center").id = "posts"
+    document.getElementById("center").id = "posts";
     modal.style.display = "none";
   /*img.style.cssFloat = "left";
     img.style.marginRight = "5px";
