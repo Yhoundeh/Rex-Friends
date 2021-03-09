@@ -1,7 +1,7 @@
 export function currPage() {
   //console.log(document.readyState);
-  if (window.location.pathname == "/index.html") {
-    document.getElementById("home").id = "highlight"; 
+  if (window.location.pathname == "/index.html" || window.location.pathname == "/") {
+    document.getElementById("home").id = "highlight";
   }
   else if (window.location.pathname == "/pages/groups.html") {
     document.getElementById("groups").id = "highlight";
@@ -12,7 +12,9 @@ export function currPage() {
   else if (window.location.pathname == "/pages/liked.html") {
     document.getElementById("liked").id = "highlight";
   }
-  //console.log(window.location.pathname);
+  else {
+    console.log("Add '" + window.location.pathname + "' to currPage");
+  }
 }
 
 export function renderWithTemplate(template, parent, data, callback) {
