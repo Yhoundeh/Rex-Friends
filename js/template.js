@@ -1,16 +1,20 @@
-export function currPage() {
+function currPage() {
   //console.log(document.readyState);
   if (window.location.pathname == "/index.html" || window.location.pathname == "/") {
     document.getElementById("home").id = "highlight";
+    document.getElementById("current_page").innerHTML = "Home";
   }
   else if (window.location.pathname == "/pages/groups.html") {
     document.getElementById("groups").id = "highlight";
+    document.getElementById("current_page").innerHTML = "Groups";
   }
   else if (window.location.pathname == "/pages/search.html") {
     document.getElementById("search").id = "highlight";
+    document.getElementById("current_page").innerHTML = "Search";
   }
   else if (window.location.pathname == "/pages/liked.html") {
     document.getElementById("liked").id = "highlight";
+    document.getElementById("current_page").innerHTML = "Liked";
   }
   else {
     console.log("Add '" + window.location.pathname + "' to currPage");
