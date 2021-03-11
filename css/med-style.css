@@ -34,7 +34,7 @@
     padding-bottom: 0.5rem;
   }
 
-  .main-header__list-item a {
+  .main-header__list-item a, #sidebar h2 {
     white-space: nowrap;
     background: transparent;
     border: none;
@@ -57,6 +57,8 @@
 
   .content {
     min-height: calc(100vh - 5rem);
+    display: grid;
+    grid-template-columns: 9rem auto;
   }
 
   /*----------- FOOTER --------------*/
@@ -125,4 +127,33 @@
   #center img {
     max-width: 35%;
   }
+
+  /*----- SIDEBAR specific css -----*/
+#sidebar {
+  display: inline;
+  height: 100%;
+  width: 9rem;
+  position: fixed;
+  z-index: 0;
+  top: 0rem;
+  left: 0;
+  background-color: var(--secondary-black);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+#sidebar h2 {
+  margin-top: 5rem;
+}
+
+/* Links on mouse-over */
+#sidebar a {
+  white-space: nowrap;
+  border: none;
+  text-decoration: none;
+  color: var(--primary-white);
+  padding: 0.5rem 1rem;
+  border-radius: 0% 5% 5% 0%;
+}
+
 }

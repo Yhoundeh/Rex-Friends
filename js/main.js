@@ -1,4 +1,5 @@
-import {loadHeaderFooter, loadPosts} from './template.js';
+import {loadHeaderFooter, loadPosts, loadSidebar} from './template.js';
 
 loadHeaderFooter();
+loadSidebar();
 loadPosts();

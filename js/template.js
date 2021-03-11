@@ -49,6 +49,12 @@ export async function loadHeaderFooter() {
   currPage();
 }
 
+export async function loadSidebar() {
+  const post = await loadTemplate('../templates/sidebar.html');
+  const postElement = document.getElementById("sidebar");
+  renderWithTemplate(post, postElement);
+}
+
 export async function loadPosts() {
   document.getElementById("Noposts").style.display = "none";
   var i;
@@ -58,6 +64,7 @@ export async function loadPosts() {
     renderWithTemplate(post, postElement);
     getModal(i);
   }
+
 /*var img = document.getElementById('myImg');
   document.getElementById('myModal').style.display = "none";
   img.style.cssFloat = "left";
