@@ -16,6 +16,9 @@ function currPage() {
     document.getElementById("liked").id = "highlight";
     document.getElementById("current_page").innerHTML = "Liked";
   }
+  else if (window.location.pathname == "/views/auth/login.html") {
+    document.getElementById("current_page").innerHTML = "Login";
+  }
   else {
     console.log("Add '" + window.location.pathname + "' to currPage");
   }
