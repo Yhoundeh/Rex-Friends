@@ -9,6 +9,25 @@
         <link rel="stylesheet" href="/css/style.css"/>
         <link rel="stylesheet" href="/css/med-style.css"/>
         <script src="/js/main.js" type="module" ></script>
+        <template id="post-card__template">
+            <li class="post-card">
+                <div class="post-card__top">
+                    <h3><a href="" class="post-card__group"></a></h3>
+                    <span>&#10148;</span>
+                    <h4><a href="" class="post-card__user"></a></h4>
+                </div>
+                <img src="images/" alt="" class="post-card__img">
+                <p class="post-card__info"></p>
+                <div class="post-card__favorite"></div>
+                <ul class="post-card__comments"></ul>
+            </li>
+        </template>
+        <template id="comment-card__template"> 
+            <li class="post-card__comment">
+                <h3 class="post-card__comment-user"></h3>
+                <p class="post-card__comment-info"></p>
+            </li>
+        </template>
     </head>
     <body>
         <div class="content">
@@ -16,9 +35,10 @@
                 <span id="Jscript"><noscript>This page requires Javascript!</noscript></span>
             </header>
             <main class="main">
-                <div id="posts">
+                <ul class="post-list"></ul>
+                <!-- <div id="posts">
                     <span id="Noposts">No posts to load &#9785;</span>
-                </div>
+                </div> -->
             </main>
         </div>
         <footer class="main-footer"></footer>

@@ -1,0 +1,38 @@
+{
+    "post":[
+        {
+            "group": "DinoSquad",
+            "user": "Bobbert",
+            "img": "/images/dinosaur-img.jpg",
+            "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque accusamus explicabo nemo assumenda, nobis architecto, aperiam beatae odio sit et vitae. Laborum commodi repellat impedit maiores, architecto pariatur sequi!",
+            "favorited": true,
+            "comments":[
+                {
+                    "user": "Caren",
+                    "comment": "Why do you like DINOS!?!"
+                },
+                {
+                "user": "Fred",
+                "comment": "BEcause they are amamamzing!!!!"
+                }
+            ]
+        },
+        {
+            "group": "AntiDinoSquad",
+            "user": "Caren",
+            "img": "/images/yeet-the-dinos.jpg",
+            "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque accusamus explicabo nemo assumenda, nobis architecto, aperiam beatae odio sit et vitae. Laborum commodi repellat impedit maiores, architecto pariatur sequi!",
+            "favorited": false,
+            "comments":[
+                {
+                    "user": "Bobbert",
+                    "comment": "You are Lame"
+                },
+                {
+                "user": "Fred",
+                "comment": "Yeah you tell her Bobbert"
+                }
+            ]
+        }
+    ]
+}
