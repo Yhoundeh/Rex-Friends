@@ -140,13 +140,12 @@
   background-color: var(--secondary-black);
   overflow-x: hidden;
   padding-top: 20px;
-}
+  }
 
 #sidebar h2 {
   margin-top: 5rem;
-}
+  }
 
-/* Links on mouse-over */
 #sidebar a {
   white-space: nowrap;
   border: none;
@@ -154,6 +153,5 @@
   color: var(--primary-white);
   padding: 0.5rem 1rem;
   border-radius: 0% 5% 5% 0%;
-}
-
+  }
 }
