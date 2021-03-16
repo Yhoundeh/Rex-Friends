@@ -5,7 +5,7 @@ export async function loadHeaderFooter() {
     const footerElement = document.querySelector('footer');
     renderWithTemplate(header, headerElement);
     renderWithTemplate(footer, footerElement);
-    // currPage();
+    currPage();
 }
 
 export function renderListWithTemplate(template, parent, list, callback) {
@@ -39,105 +39,51 @@ function convertToText(res) {
     }
 }
 
+function currPage() {
+  //console.log(document.readyState);
+  if (window.location.pathname == "/index.html" || window.location.pathname == "/") {
+    document.getElementById("home").id = "highlight";
+    document.getElementById("current_page").innerHTML = "Home";
+  }
+  else if (window.location.pathname == "/pages/groups.html") {
+    document.getElementById("groups").id = "highlight";
+    document.getElementById("current_page").innerHTML = "Groups";
+  }
+  else if (window.location.pathname == "/pages/search.html") {
+    document.getElementById("search").id = "highlight";
+    document.getElementById("current_page").innerHTML = "Search";
+  }
+  else if (window.location.pathname == "/pages/liked.html") {
+    document.getElementById("liked").id = "highlight";
+    document.getElementById("current_page").innerHTML = "Liked";
+  }
+  else {
+    console.log("Add '" + window.location.pathname + "' to currPage");
+  }
+}
 
-
-
-
-
-
-
-// function convertToText(res) {
-//     if (res.ok) {
-//       return res.text();
-//     } else {
-//       throw new Error('Bad Response');
-//     }
-// }
+export function getModal(i) {
+  console.log(i);
+  let showMenu;
+  // Get the modal
+  var modal = document.getElementById('myModal');
   
-// // wrapper for querySelector...returns matching element
-// export function qs(selector) {
-// return document.querySelector(selector);
-// }
+  if(document.getElementById("posts").id == "posts") {
+    modal.style.display = "block";
+    document.getElementById("posts").id = "center"; 
+  } else if (document.getElementById("center").id == "center") {
+    modal.style.display = "none";
+    document.getElementById("center").id = "posts";
+  }
+}
 
-
-// // set a listener for both touchend and click
-// export function setClick(selector, callback) {
-// qs(selector).addEventListener('touchend', (event) => {
-// event.preventDefault();
-// callback();
-// });
-// qs(selector).addEventListener('click', callback);
-// }
-
-// export function getParam(param) {
-// const queryString = window.location.search;
-// const urlParams = new URLSearchParams(queryString);
-// return urlParams.get(param);
-// }
-
-// export function renderListWithTemplate(template, parent, list, callback) {
-// list.forEach(item => {
-// const clone = template.content.cloneNode(true);
-// const templateWithData = callback(clone, item);
-// parent.appendChild(templateWithData);
-// })
-// }
-
-// export function renderWithTemplate(template, parent, data, callback) {
-
-// let clone = template.content.cloneNode(true);
-// if(callback) {
-// clone = callback(clone, data);
-
-// }
-// parent.appendChild(clone);
-
-// }
-
-// export async function loadTemplate(path) {
-// const html = await fetch(path).then(convertToText);
-// const template = document.createElement('template');
-// template.innerHTML = html;
-// return template;
-
-// }
-
-
-
-
-// // retrieve data from localstorage
-// export function getLocalStorage(key) {
-//     return JSON.parse(localStorage.getItem(key));
-//     }
-//     // save data to local storage
-//     export function setLocalStorage(key, data) {
-//     localStorage.setItem(key, JSON.stringify(data));
-//     }
-
-// export function alertMessage(message, scroll = true, duration = 3000) {
-// const alert = document.createElement('div');
-// alert.classList.add('alert');
-// alert.innerHTML = `<p>${message}</p><span>X</span>`;
-
-// alert.addEventListener('click', function(e) {
-// if(e.target.tagName == 'SPAN') {
-// main.removeChild(this);
-// }
-// })
-// const main = document.querySelector('main');
-// main.prepend(alert);
-// // make sure they see the alert by scrolling to the top of the window
-// //we may not always want to do this...so default to scroll=true, but allow it to be passed in and overridden.
-// if(scroll)
-// window.scrollTo(0,0);
-
-// // left this here to show how you could remove the alert automatically after a certain amount of time.
-// // setTimeout(function () {
-// //   main.removeChild(alert);
-// // }, duration);
-// }
-
-// export function removeAllAlerts() {
-//     const alerts = document.querySelectorAll('.alert');
-//     alerts.forEach(alert => document.querySelector('main').removeChild(alert));
-// }
+export async function loadPosts(posts) {
+  document.getElementById("Noposts").style.display = "none";
+  var i;
+  for (i = 0; i < posts.length; i++) {
+    const post = await loadTemplate('../templates/post.html');
+    const postElement = document.getElementById("posts");
+    renderWithTemplate(post, postElement);
+    getModal(i);
+  }
+}

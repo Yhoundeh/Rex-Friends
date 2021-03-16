@@ -11,6 +11,10 @@
         <script src="/js/main.js" type="module" ></script>
         <template id="post-card__template">
             <li class="post-card">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img src="images/" alt="" class="modal-content" id="img01">
+                </div>
                 <div class="post-card__top">
                     <h3><a href="" class="post-card__group"></a></h3>
                     <span>&#10148;</span>
@@ -36,9 +40,9 @@
             </header>
             <main class="main">
                 <ul class="post-list"></ul>
-                <!-- <div id="posts">
+                <div id="posts">
                     <span id="Noposts">No posts to load &#9785;</span>
-                </div> -->
+                </div>
             </main>
         </div>
         <footer class="main-footer"></footer>
