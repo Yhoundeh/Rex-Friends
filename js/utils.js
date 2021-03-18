@@ -8,6 +8,12 @@ export async function loadHeaderFooter() {
     currPage();
 }
 
+export async function loadSidebar() {
+  const post = await loadTemplate('../templates/sidebar.html');
+  const postElement = document.getElementById("sidebar");
+  renderWithTemplate(post, postElement);
+}
+
 export function renderListWithTemplate(template, parent, list, callback) {
     list.forEach(item => {
       const clone = template.content.cloneNode(true);
@@ -57,33 +63,36 @@ function currPage() {
     document.getElementById("liked").id = "highlight";
     document.getElementById("current_page").innerHTML = "Liked";
   }
+  else if (window.location.pathname == "/views/auth/login.html") {
+    document.getElementById("current_page").innerHTML = "Login";
+  }
   else {
     console.log("Add '" + window.location.pathname + "' to currPage");
   }
 }
 
-export function getModal(i) {
-  console.log(i);
-  let showMenu;
-  // Get the modal
-  var modal = document.getElementById('myModal');
+// export function getModal(i) {
+//   console.log(i);
+//   let showMenu;
+//   // Get the modal
+//   var modal = document.getElementById('myModal');
   
-  if(document.getElementById("posts").id == "posts") {
-    modal.style.display = "block";
-    document.getElementById("posts").id = "center"; 
-  } else if (document.getElementById("center").id == "center") {
-    modal.style.display = "none";
-    document.getElementById("center").id = "posts";
-  }
-}
+//   if(document.getElementById("posts").id == "posts") {
+//     modal.style.display = "block";
+//     document.getElementById("posts").id = "center"; 
+//   } else if (document.getElementById("center").id == "center") {
+//     modal.style.display = "none";
+//     document.getElementById("center").id = "posts";
+//   }
+// }
 
-export async function loadPosts(posts) {
-  document.getElementById("Noposts").style.display = "none";
-  var i;
-  for (i = 0; i < posts.length; i++) {
-    const post = await loadTemplate('../templates/post.html');
-    const postElement = document.getElementById("posts");
-    renderWithTemplate(post, postElement);
-    getModal(i);
-  }
-}
+// export async function loadPosts(posts) {
+//   document.getElementById("Noposts").style.display = "none";
+//   var i;
+//   for (i = 0; i < posts.length; i++) {
+//     const post = await loadTemplate('../templates/post.html');
+//     const postElement = document.getElementById("posts");
+//     renderWithTemplate(post, postElement);
+//     getModal(i);
+//   }
+// }
