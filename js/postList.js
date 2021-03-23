@@ -1,39 +1,52 @@
 import { renderListWithTemplate } from './utils.js';
-
 var posts = [
     {
-        "id": 0,
-        "group": {"groupId": 0, "groupName": "DinoSquad"},
-        "user": {"userId": 0, "userName": "Bobbert"},
-        "img": "dinosaur-img.jpg",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque accusamus explicabo nemo assumenda, nobis architecto, aperiam beatae odio sit et vitae. Laborum commodi repellat impedit maiores, architecto pariatur sequi!",
+        "post_id": 0,
+        "group_id": 0, 
+        "group_name": "DinoSquad",
+        "user_id": 0, 
+        "user_name": "Bobbert",
+        "img_path": "dinosaur-img.jpg",
+        "post_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque accusamus explicabo nemo assumenda, nobis architecto, aperiam beatae odio sit et vitae. Laborum commodi repellat impedit maiores, architecto pariatur sequi!",
         "favorited": true,
+        "posted_date": "2020-12-12T00:00:00.000Z",
         "comments":[
             {
-                "user": {"userId": 1, "userName": "Caren"},
-                "comment": "Why do you like DINOS!?!"
+                "user_id": 1,
+                "user_name": "Caren",
+                "comment_content": "Why do you like DINOS!?!",
+                "posted_date": "2020-12-12T00:00:00.000Z"
             },
             {
-                "user": {"userId": 2, "userName": "Fred"},
-                "comment": "BEcause they are amamamzing!!!!"
+                "user_id": 2, 
+                "user_name": "Fred",
+                "comment_content": "BEcause they are amamamzing!!!!",
+                "posted_date": "2020-12-12T00:00:00.000Z"
             }
         ]
     },
     {
-        "id": 1,
-        "group": {"groupId": 0, "groupName": "AntiDinoSquad"},
-        "user": {"userId": 1, "userName": "Caren"},
-        "img": "yeet-the-dinos.jpg",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque accusamus explicabo nemo assumenda, nobis architecto, aperiam beatae odio sit et vitae. Laborum commodi repellat impedit maiores, architecto pariatur sequi!",
+        "post_id": 1,
+        "group_id": 1, 
+        "group_name": "AntiDinoSquad",
+        "user_id": 1, 
+        "user_name": "Caren",
+        "img_path": "yeet-the-dinos.jpg",
+        "post_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque accusamus explicabo nemo assumenda, nobis architecto, aperiam beatae odio sit et vitae. Laborum commodi repellat impedit maiores, architecto pariatur sequi!",
         "favorited": false,
+        "posted_date": "2020-12-12T00:00:00.000Z",
         "comments":[
             {
-                "user": {"userId": 0, "userName": "Bobbert"},
-                "comment": "You are Lame"
+                "user_id": 0,
+                "user_name": "Bobbert",
+                "comment_content": "You are Lame",
+                "posted_date": "2020-12-12T00:00:00.000Z"
             },
             {
-                "user": {"userId": 2, "userName": "Fred"},
-                "comment": "Yeah you tell her Bobbert"
+                "user_id": 2, 
+                "user_name": "Fred",
+                "comment_content": "Yeah you tell her Bobbert",
+                "posted_date": "2020-12-12T00:00:00.000Z"
             }
         ]
     }
@@ -50,14 +63,14 @@ export default class postList {
     }
 
     prepareTemplate(template, post) {
-        template.querySelector('.post-card .modal').id += post.id;
-        template.querySelector('.post-card__group').textContent =  post.group.groupName;
-        template.querySelector('.post-card__user').textContent =  post.user.userName;
-        template.querySelector('.post-card__img').src +=  post.img;
-        template.querySelector('.post-card__img').alt += post.group.groupName;
-        template.querySelector('.modal-content').src +=  post.img;
-        template.querySelector('.modal-content').alt += post.group.groupName;
-        template.querySelector('.post-card__info').textContent =  post.info;
+        template.querySelector('.post-card .modal').id += post.post_id;
+        template.querySelector('.post-card__group').textContent =  post.group_name;
+        template.querySelector('.post-card__user').textContent =  post.user_name;
+        template.querySelector('.post-card__img').src +=  post.img_path;
+        template.querySelector('.post-card__img').alt += post.group_name;
+        template.querySelector('.modal-content').src +=  post.img_path;
+        template.querySelector('.modal-content').alt += post.group_name;
+        template.querySelector('.post-card__info').textContent =  post.post_content;
         if(post.favorited) {
             post.favorited = '<i class="fas fa-heart fa-2x"></i>';
         } else {
@@ -70,8 +83,8 @@ export default class postList {
     }
 
     prepareComment(template, comment){
-        template.querySelector('.post-card__comment-user').textContent = comment.user.userName;
-        template.querySelector('.post-card__comment-info').textContent = comment.comment;
+        template.querySelector('.post-card__comment-user').textContent = comment.user_name;
+        template.querySelector('.post-card__comment-info').textContent = comment.comment_content;
         return template;
     }
 
