@@ -46,12 +46,14 @@ function convertToText(res) {
 }
 
 export function clickLike(event) {
-  let liked = event.currentTarget;
-  console.dir(event.currentTarget)
-  if(liked.className == "fas fa-heart fa-2x") {
-      liked.className = "far fa-heart fa-2x";
+  let favorited = event.currentTarget;
+  //console.dir(event.currentTarget)
+  if(favorited.className == "fas fa-heart fa-2x") {
+    favorited.className = "far fa-heart fa-2x";
+    //update database
   } else {
-      liked.className = "fas fa-heart fa-2x";
+    favorited.className = "fas fa-heart fa-2x";
+    //update database
   }
 }
 

@@ -134,6 +134,10 @@ body {
   color: var(--primary-white);
 }
 
+#sidebar {
+  display: none;
+}
+
 /*----------- FOOTER --------------*/
 .main-footer__info {
   display: none;
@@ -301,9 +305,6 @@ body {
 .post-card__comment-info {
   padding-left: 1rem;
 }
-
-
-
 
 
 #Jscript,
@@ -488,8 +489,4 @@ body {
 .form-control input.invalid,
 .form-control textarea.invalid {
   border-color: red;
-}
-
-#sidebar {
-  display: none;
 }
