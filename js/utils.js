@@ -45,6 +45,16 @@ function convertToText(res) {
     }
 }
 
+export function clickLike(event) {
+  let liked = event.currentTarget;
+  console.dir(event.currentTarget)
+  if(liked.className == "fas fa-heart fa-2x") {
+      liked.className = "far fa-heart fa-2x";
+  } else {
+      liked.className = "fas fa-heart fa-2x";
+  }
+}
+
 function currPage() {
   //console.log(document.readyState);
   if (window.location.pathname == "/index.html" || window.location.pathname == "/") {
