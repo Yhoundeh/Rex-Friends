@@ -46,6 +46,7 @@ export default class postList {
     }
 
     async init() {
+        document.getElementById("Noposts").style.display = "none";
         this.renderList();
     }
 

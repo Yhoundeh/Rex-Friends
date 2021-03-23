@@ -86,7 +86,7 @@ export function getModal(i) {
   }
 }
 
-export async function loadPosts(posts) {
+/*export async function loadPosts(posts) {
   document.getElementById("Noposts").style.display = "none";
   var i;
   for (i = 0; i < posts.length; i++) {
@@ -94,5 +94,4 @@ export async function loadPosts(posts) {
     const postElement = document.getElementById("posts");
     renderWithTemplate(post, postElement);
     getModal(i);
-  }
-}
+  }*/
