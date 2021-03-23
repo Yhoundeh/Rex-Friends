@@ -71,20 +71,20 @@ function currPage() {
   }
 }
 
-export function getModal(i) {
-  console.log(i);
-  let showMenu;
-  // Get the modal
-  var modal = document.getElementById('myModal');
+// export function getModal(i) {
+//   console.log(i);
+//   let showMenu;
+//   // Get the modal
+//   var modal = document.getElementById('myModal');
   
-  if(document.getElementById("posts").id == "posts") {
-    modal.style.display = "block";
-    document.getElementById("posts").id = "center"; 
-  } else if (document.getElementById("center").id == "center") {
-    modal.style.display = "none";
-    document.getElementById("center").id = "posts";
-  }
-}
+//   if(document.getElementById("posts").id == "posts") {
+//     modal.style.display = "block";
+//     document.getElementById("posts").id = "center"; 
+//   } else if (document.getElementById("center").id == "center") {
+//     modal.style.display = "none";
+//     document.getElementById("center").id = "posts";
+//   }
+// }
 
 /*export async function loadPosts(posts) {
   document.getElementById("Noposts").style.display = "none";

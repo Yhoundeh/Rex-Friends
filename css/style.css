@@ -100,8 +100,12 @@ header #account {
 
 /*----------- BODY --------------*/
 body {
-  margin-bottom: 5.5rem;
+  margin-bottom: 5rem;
 }
+
+/* .content {
+  background-color: var(--secondary-white);
+} */
 
 .main {
   width: 96%;
@@ -234,19 +238,28 @@ body {
   clear: both;
   display: table;
   box-shadow: 2px 5px 3px #d7d8d7;
+  /* border: 1px solid black; */
   border-radius: 5px;
-  margin: 5px;
+  margin: 1rem;
+
 }
 
 .post-card__top {
   display: flex;
   align-items: center;
+  padding: 0 1rem;
+  background-color: var(--secondary-color);
+}
+
+.post-card__top span {
   color: var(--primary-color);
+  padding: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .post-card__group,
 .post-card__user {
-  color: var(--primary-black);
+  color: var(--primary-white);
 }
 
 .post-card__img {
@@ -262,7 +275,12 @@ body {
   opacity: 0.7;
 }
 
-.post-card__info {}
+.post-card__favorite {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 
 .post-card__favorite .fas {
   color: pink;
@@ -272,6 +290,14 @@ body {
   clear: both;
 }
 
+.post-card__comment-user {
+  border-top: 1px solid var(--secondary-color);
+  padding-left: 0.5rem;
+}
+
+.post-card__comment-info {
+  padding-left: 1rem;
+}
 
 
 
@@ -462,5 +488,5 @@ body {
 }
 
 #sidebar {
-  display:none;
+  display: none;
 }
