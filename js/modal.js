@@ -2,7 +2,7 @@ let showMenu = false;
 
 export function getModal(event) {
   let modal = {};
-  console.dir(event.currentTarget)
+  //console.dir(event.currentTarget)
   if(event.currentTarget.nodeName === 'IMG') {
     modal = event.currentTarget.parentElement.querySelector('.modal');
   } else {

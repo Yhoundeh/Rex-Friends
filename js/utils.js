@@ -5,6 +5,7 @@ export async function loadHeaderFooter() {
     const footerElement = document.querySelector('footer');
     renderWithTemplate(header, headerElement);
     renderWithTemplate(footer, footerElement);
+    document.getElementById("date").innerHTML = new Date().getFullYear();
     currPage();
 }
 
@@ -43,6 +44,18 @@ function convertToText(res) {
     } else {
       throw new Error("Bad Response");
     }
+}
+
+export function clickLike(event) {
+  let favorited = event.currentTarget;
+  //console.dir(event.currentTarget)
+  if(favorited.className == "fas fa-heart fa-2x") {
+    favorited.className = "far fa-heart fa-2x";
+    //update database
+  } else {
+    favorited.className = "fas fa-heart fa-2x";
+    //update database
+  }
 }
 
 function currPage() {

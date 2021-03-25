@@ -68,7 +68,6 @@
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 5rem;
     background: var(--secondary-color);
     display: grid;
     -webkit-box-shadow: inset 0 10px 0 0 var(--primary-color);
@@ -132,16 +131,16 @@
 
   /*----- SIDEBAR specific css -----*/
   #sidebar {
-    display: inline;
-    height: 100%;
-    width: 9rem;
-    position: fixed;
-    z-index: 0;
-    top: 0rem;
-    left: 0;
     background-color: var(--secondary-black);
     overflow-x: hidden;
     padding-top: 20px;
+    display: inline;
+    position: fixed;
+    height: 100%;
+    width: 9rem;
+    top: 0rem;
+    left: 0;
+    z-index: 0;
   }
 
   #sidebar h2 {
@@ -154,6 +153,6 @@
     text-decoration: none;
     color: var(--primary-white);
     padding: 0.5rem 1rem;
-    border-radius: 0% 5% 5% 0%;
+    /*border-radius: 0% 5% 5% 0%;*/
   }
 }
