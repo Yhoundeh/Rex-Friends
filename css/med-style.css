@@ -68,7 +68,6 @@
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 5rem;
     background: var(--secondary-color);
     display: grid;
     -webkit-box-shadow: inset 0 10px 0 0 var(--primary-color);

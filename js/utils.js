@@ -5,6 +5,7 @@ export async function loadHeaderFooter() {
     const footerElement = document.querySelector('footer');
     renderWithTemplate(header, headerElement);
     renderWithTemplate(footer, footerElement);
+    document.getElementById("date").innerHTML = new Date().getFullYear();
     currPage();
 }
 
