@@ -1,3 +1,3 @@
-import {loadHeaderFooter} from './template.js';
+import {loadHeaderFooter} from './utils.js';
 
 loadHeaderFooter();

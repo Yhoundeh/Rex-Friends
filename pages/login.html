@@ -4,11 +4,11 @@
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Rex Chat | Home</title>
+        <title>Rex Chat | Login</title>
         <link rel="shortcut icon" type="image/svg" href="images/tyrannosaurus-rex.svg"/>
         <link rel="stylesheet" href="/css/style.css"/>
         <link rel="stylesheet" href="/css/med-style.css"/>
-        <script src="/js/main.js" type="module" ></script>
+        <script src="/js/login.js" type="module" ></script>
     </head>
     <body>
         <div class="content">
@@ -16,14 +16,18 @@
                 <span id="Jscript"><noscript>This page requires Javascript!</noscript></span>
             </header>
             <main class="main">
-                <div class="login">
-                    <form class="login-form" action="/login" method="POST">
+                <div class="auth">
+                    <div class="newAccount">
+                        <p><small>Need to make an account?</small></p>
+                        <a class='btn' href="./signup.html">Signup Today!</a>
+                    </div>
+                    <form class="auth-form" action="/login" method="POST">
                         <div class="form-control">
-                            <label for="email">E-Mail</label>
+                            <label for="username">User Name</label>
                             <input
-                                type="email" 
-                                name="email" 
-                                id="email"
+                                type="username" 
+                                name="username" 
+                                id="username"
                             >
                         </div>
                         <div class="form-control">
@@ -39,11 +43,12 @@
                     </form>
                     <div class="newPassword">
                         <p><small>Forgot your Password?</small></p>
-                        <a class='btn' href="/reset">Reset Password</a>
+                        <a class='btn' href="./reset-password.html">Reset Password</a>
                     </div>
                 </div>
             </main>
         </div>
         <footer class="main-footer"></footer>
+        <script src="https://kit.fontawesome.com/2922416a8f.js" crossorigin="anonymous"></script>
     </body>
 </html>

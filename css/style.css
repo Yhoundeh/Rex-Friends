@@ -430,7 +430,7 @@ body {
 
 
 /*----- LOGIN specific css -----*/
-.login {
+.auth {
   width: 20rem;
   max-width: 90%;
   margin: auto;
@@ -440,12 +440,13 @@ body {
   padding: 0.5rem;
 }
 
-.login-form {
+.auth-form {
   margin: 1rem;
   display: block;
 }
 
-.newPassword {
+.newPassword,
+.newAccount {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -454,7 +455,8 @@ body {
 
 }
 
-.newPassword p {
+.newPassword p,
+.newAccount p {
   padding-bottom: 0.25rem;
 }
 
