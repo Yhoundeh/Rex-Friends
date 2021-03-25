@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lan="en-us">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Rex Chat | Signup</title>
+        <link rel="shortcut icon" type="image/svg" href="../images/t-rex.svg"/>
+        <link rel="stylesheet" href="/css/style.css"/>
+        <link rel="stylesheet" href="/css/med-style.css"/>
+        <script src="/js/main.js" type="module" ></script>
+    </head>
+    <header class="main-header">
+        <span id="Jscript"><noscript>This page requires Javascript!</noscript></span>
+    </header>
+    <body>
+        <main class="main">
+            <div class="auth">
+                <form class="auth-form" action="/signup" method="POST">
+                    <div class="form-control">
+                        <label for="username">User Name</label>
+                        <input
+                            type="username" 
+                            name="username" 
+                            id="username"
+                        >
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input
+                            type="password" 
+                            name="password" 
+                            id="password"
+                        >
+                    </div>
+                    <div class="form-control">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input
+                            type="confirm_password" 
+                            name="confirm_password"
+                            id="confirm_password"
+                        >
+                    </div>
+                    <!-- <input type="hidden" name="_csrf" value="<%= csrfToken %>"> -->
+                    <button class="btn" type="submit">Signup</button>
+                </form>
+            </div>
+        </main>
+    </body>
+    <footer class="main-footer"></footer>
+        <script src="https://kit.fontawesome.com/2922416a8f.js" crossorigin="anonymous"></script>
+    </body>
+</html>
