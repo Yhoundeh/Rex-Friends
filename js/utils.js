@@ -84,6 +84,15 @@ function currPage() {
   }
 }
 
+export async function fetchUrl(URL) {
+  const responseData = await fetch(URL)
+  .then((response) => response.json())
+  .catch(error => console.warn(error));
+  console.log(responseData)
+  return responseData;
+};
+
+
 // export function getModal(i) {
 //   console.log(i);
 //   let showMenu;
