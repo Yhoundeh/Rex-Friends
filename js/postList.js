@@ -1,4 +1,7 @@
-import { renderListWithTemplate } from './utils.js';
+import { renderListWithTemplate, fetchUrl } from './utils.js';
+
+const URL = "https://rexfriends.herokuapp.com/getPosts"
+
 var posts = [
     {
         "post_id": 0,
@@ -55,10 +58,11 @@ var posts = [
 export default class postList {
     constructor (listElement) {
         this.listElement = listElement;
-        this.list = posts
+        this.list = '';
     }
 
     async init() {
+        this.list = await fetchUrl(URL);
         document.getElementById("Noposts").style.display = "none";
         this.renderList();
     }
