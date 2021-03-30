@@ -82,8 +82,8 @@ export default class postList {
             post.favorited = '<i class="far fa-heart fa-2x"></i>';
         }
         template.querySelector('.post-card__favorite').innerHTML = post.favorited;
-        const commentTemplate = template.querySelector('.post-card__comments');
-        this.renderComment(commentTemplate, post.comments)
+        // const commentTemplate = template.querySelector('.post-card__comments');
+        // this.renderComment(commentTemplate, post.comments)
         return template;
     }
 

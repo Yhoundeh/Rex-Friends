@@ -240,12 +240,9 @@ body {
 .post-card {
   content: "";
   clear: both;
-  display: table;
   box-shadow: 2px 5px 3px #d7d8d7;
-  /* border: 1px solid black; */
   border-radius: 5px;
   margin: 1rem;
-
 }
 
 .post-card__top {
