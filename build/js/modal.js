@@ -1,0 +1,1 @@
+let l=!1;export function getModal(t){let e={};t.currentTarget.nodeName==="IMG"?e=t.currentTarget.parentElement.querySelector(".modal"):e=t.currentTarget.parentElement,l?(e.style.display="none",document.getElementById("center").id="posts",l=!1):(e.style.display="block",document.getElementById("posts").id="center",l=!0)}
