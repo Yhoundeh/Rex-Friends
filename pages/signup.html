@@ -8,7 +8,7 @@
         <link rel="shortcut icon" type="image/svg" href="../images/t-rex.svg"/>
         <link rel="stylesheet" href="/css/style.css"/>
         <link rel="stylesheet" href="/css/med-style.css"/>
-        <script src="/js/main.js" type="module" ></script>
+        <script src="/js/auth.js" type="module" ></script>
     </head>
     <header class="main-header">
         <span id="Jscript"><noscript>This page requires Javascript!</noscript></span>
@@ -16,11 +16,11 @@
     <body>
         <main class="main">
             <div class="auth">
-                <form class="auth-form" action="/signup" method="POST">
+                <form id="signup" class="auth-form" method="POST">
                     <div class="form-control">
-                        <label for="username">User Name</label>
+                        <label for="username">Username</label>
                         <input
-                            type="username" 
+                            type="text" 
                             name="username" 
                             id="username"
                         >
@@ -33,20 +33,20 @@
                             id="password"
                         >
                     </div>
-                    <div class="form-control">
-                        <label for="confirm_password">Confirm Password</label>
+                    <!-- <div class="form-control">
+                        <label for="confirmPassword">Confirm Password</label>
                         <input
-                            type="confirm_password" 
-                            name="confirm_password"
-                            id="confirm_password"
+                            type="password"
+                            name="confirmPassword"
+                            id="confirmPassword"
                         >
-                    </div>
-                    <!-- <input type="hidden" name="_csrf" value=""> -->
-                    <button class="btn" type="submit">Signup</button>
+                    </div> -->
+                    <input class="btn" type="submit" value="Signup">
                 </form>
             </div>
         </main>
     <footer class="main-footer"></footer>
         <script src="https://kit.fontawesome.com/2922416a8f.js" crossorigin="anonymous"></script>
+        <script src="/js/signup.js"></script>
     </body>
 </html>

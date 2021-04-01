@@ -4,7 +4,7 @@ module.exports = {
   ],
   buildOptions: {
     out: "build",
-    baseUrl: "/rexchat/build/",
+    baseUrl: "/Rex-Friends/build/",
     clean: true,
     htmlFragments: true
   },

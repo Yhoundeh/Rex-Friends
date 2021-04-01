@@ -1,20 +1,23 @@
-const login = document.getElementById('login');
-const URL = "https://rexfriends.herokuapp.com/login";
+const signup = document.getElementById('signup');
+const URL = "https://rexfriends.herokuapp.com/signup";
 
-login.addEventListener('submit', function(e){
+signup.addEventListener('submit', function(e){
     e.preventDefault();
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    // const confirmPassword = document.getElementById('confirmPassword').value;
 
     fetch(URL, {
+        mode: 'no-cors',
         method: 'POST',
         body:JSON.stringify({
             username,
-            password
+            password,
+            // confirmPassword
         }),
         headers:{
-            "Content-Type":"application/json;"
+            "Content-Type":"application/json"
         }
     })
     .then(res => {

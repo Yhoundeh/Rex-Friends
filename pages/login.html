@@ -8,7 +8,7 @@
         <link rel="shortcut icon" type="image/svg" href="images/tyrannosaurus-rex.svg"/>
         <link rel="stylesheet" href="/css/style.css"/>
         <link rel="stylesheet" href="/css/med-style.css"/>
-        <script src="/js/login.js" type="module" ></script>
+        <script src="/js/auth.js" type="module" ></script>
     </head>
     <body>
         <div class="content">
@@ -21,11 +21,11 @@
                         <p><small>Need to make an account?</small></p>
                         <a class='btn' href="./signup.html">Signup Today!</a>
                     </div>
-                    <form class="auth-form" action="/login" method="POST">
+                    <form id="login" class="auth-form" method="POST">
                         <div class="form-control">
-                            <label for="username">User Name</label>
+                            <label for="username">Username</label>
                             <input
-                                type="username" 
+                                type="text"
                                 name="username" 
                                 id="username"
                             >
@@ -39,7 +39,7 @@
                             >
                         </div>
                         <!-- <input type="hidden" name="_csrf" value="<%= csrfToken %>"> -->
-                        <button class="btn" type="submit">Login</button>
+                        <input class="btn" type="submit" value="Login">
                     </form>
                     <div class="newPassword">
                         <p><small>Forgot your Password?</small></p>
@@ -50,5 +50,6 @@
         </div>
         <footer class="main-footer"></footer>
         <script src="https://kit.fontawesome.com/2922416a8f.js" crossorigin="anonymous"></script>
+        <script src="/js/login.js"></script>
     </body>
 </html>
