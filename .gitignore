@@ -3,7 +3,3 @@
 web_modules
 node_modules
 .vscode/launch.json
-.gitignore
-package-lock.json
-package.json
-snowpack.config.js
