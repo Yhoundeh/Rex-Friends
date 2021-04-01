@@ -6,15 +6,12 @@ signup.addEventListener('submit', function(e){
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    // const confirmPassword = document.getElementById('confirmPassword').value;
 
     fetch(URL, {
-        mode: 'no-cors',
         method: 'POST',
         body:JSON.stringify({
             username,
-            password,
-            // confirmPassword
+            password
         }),
         headers:{
             "Content-Type":"application/json"

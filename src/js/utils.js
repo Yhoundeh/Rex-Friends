@@ -1,6 +1,10 @@
+const URL = '//valiantwolf.github.io/Rex-Friends/build'
+
+
+
 export async function loadHeaderFooter() {
-    const header = await loadTemplate('/templates/header.html');
-    const footer = await loadTemplate('/templates/footer.html');
+    const header = await loadTemplate(URL + '/templates/header.html');
+    const footer = await loadTemplate(URL + '/templates/footer.html');
     const headerElement = document.querySelector('header');
     const footerElement = document.querySelector('footer');
     renderWithTemplate(header, headerElement);
@@ -10,7 +14,7 @@ export async function loadHeaderFooter() {
 }
 
 export async function loadSidebar() {
-  const post = await loadTemplate('../templates/sidebar.html');
+  const post = await loadTemplate(URL + '/templates/sidebar.html');
   const postElement = document.getElementById("sidebar");
   renderWithTemplate(post, postElement);
 }

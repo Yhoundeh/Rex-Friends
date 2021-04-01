@@ -14,7 +14,7 @@ login.addEventListener('submit', function(e){
             password
         }),
         headers:{
-            "Content-Type":"application/json;"
+            "Content-Type":"application/json"
         }
     })
     .then(res => {
