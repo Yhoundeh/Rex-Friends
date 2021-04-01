@@ -2,7 +2,7 @@
 ## Overview
 
 This repository is a simple group chat website called Rex Chat created by Aaron Dunn, Samuel Witt, and Marvis Igbineweka. You can see this website at [Rex-Friends](https://valiantwolf.github.io/Rex-Friends/build/) Logo belongs to [flaticon.com](https://www.flaticon.com/). Other icons are sourced from [fontawsome.com](https://fontawesome.com/).
-Backend credit goes to: Riley Nelson, Christian Longhurst, and Alexandria Tykhomyrova.
+Backend credit goes to: Riley Nelson, Christian Longhurst, and Alexandria Tykhomyrova. Their work can be found at [rexfriends.herokuapp](https://rexfriends.herokuapp.com/).
 
 
 [Website Demo Video](https://www.youtube.com/watch?v=-aLYvZ5sX28)
