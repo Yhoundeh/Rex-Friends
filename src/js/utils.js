@@ -1,7 +1,5 @@
 const URL = '//valiantwolf.github.io/Rex-Friends/build'
 
-
-
 export async function loadHeaderFooter() {
     const header = await loadTemplate(URL + '/templates/header.html');
     const footer = await loadTemplate(URL + '/templates/footer.html');
