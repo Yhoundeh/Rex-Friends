@@ -62,7 +62,7 @@ export function clickLike(event) {
 
 function currPage() {
   //console.log(document.readyState);
-  if (window.location.pathname == "/index.html" || window.location.pathname == "/") {
+  if (window.location.pathname == "/index.html" || window.location.pathname == "/" || window.location.pathname == "/Rex-Friends/build/") {
     document.getElementById("home").id = "highlight";
     document.getElementById("current_page").innerHTML = "Home";
   }
@@ -70,15 +70,15 @@ function currPage() {
     document.getElementById("groups").id = "highlight";
     document.getElementById("current_page").innerHTML = "Groups";
   }
-  else if (window.location.pathname == "/pages/search.html") {
+  else if (window.location.pathname == "/pages/search.html" || window.location.pathname == "/Rex-Friends/pages/search.html") {
     document.getElementById("search").id = "highlight";
     document.getElementById("current_page").innerHTML = "Search";
   }
-  else if (window.location.pathname == "/pages/liked.html") {
+  else if (window.location.pathname == "/pages/liked.html" || window.location.pathname == "/Rex-Friends/pages/liked.html") {
     document.getElementById("liked").id = "highlight";
     document.getElementById("current_page").innerHTML = "Liked";
   }
-  else if (window.location.pathname == "/pages/login.html") {
+  else if (window.location.pathname == "/pages/login.html" || window.location.pathname == "/Rex-Friends/pages/login.html") {
     document.getElementById("current_page").innerHTML = "Login";
   }
   else {
