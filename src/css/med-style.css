@@ -151,7 +151,7 @@
     margin-top: 5rem;
   }
 
-  #sidebar a {
+  #sidebar li {
     white-space: nowrap;
     border: none;
     text-decoration: none;

@@ -15,6 +15,7 @@
     </header>
     <body>
         <main class="main">
+            <div class="message"></div>
             <div class="auth">
                 <form id="signup" class="auth-form" method="POST">
                     <div class="form-control">
@@ -23,6 +24,7 @@
                             type="text" 
                             name="username" 
                             id="username"
+                            required
                         >
                     </div>
                     <div class="form-control">
@@ -31,16 +33,18 @@
                             type="password" 
                             name="password" 
                             id="password"
+                            required
                         >
                     </div>
-                    <!-- <div class="form-control">
+                    <div class="form-control">
                         <label for="confirmPassword">Confirm Password</label>
                         <input
                             type="password"
                             name="confirmPassword"
                             id="confirmPassword"
+                            required
                         >
-                    </div> -->
+                    </div>
                     <input class="btn" type="submit" value="Signup">
                 </form>
             </div>

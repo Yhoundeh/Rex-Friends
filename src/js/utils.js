@@ -11,12 +11,6 @@ export async function loadHeaderFooter() {
     currPage();
 }
 
-export async function loadSidebar() {
-  const post = await loadTemplate(URL + '/templates/sidebar.html');
-  const postElement = document.getElementById("sidebar");
-  renderWithTemplate(post, postElement);
-}
-
 export function renderListWithTemplate(template, parent, list, callback) {
     list.forEach(item => {
       const clone = template.content.cloneNode(true);

@@ -1,11 +1,10 @@
-import {loadHeaderFooter, loadSidebar, clickLike} from './utils.js';
+import {loadHeaderFooter, clickLike} from './utils.js';
 import postList from './postList.js';
 import {getModal} from './modal.js';
 
 const post = new postList(document.querySelector('.post-list'));
 
 loadHeaderFooter();
-loadSidebar();
 
 post.init()
     .then(() => {
