@@ -5,7 +5,7 @@ This repository is a simple group chat website called Rex Chat created by Aaron 
 Backend credit goes to: Riley Nelson, Christian Longhurst, and Alexandria Tykhomyrova. Their work can be found at [crlonghurst/rex-friends](https://github.com/crlonghurst/rex-friends).
 
 
-[Website Demo Video](https://www.youtube.com/watch?v=-aLYvZ5sX28)
+[Website Demo Video](https://youtu.be/c9b3e4dTc-g)
 
 ## Development Environment
 
